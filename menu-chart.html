@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials-FRESH HERBAL GREEN JUICE</title>
+    <link rel="stylesheet" href="./manu-chart.css">
+</head>
+<body>
+ <section class="testimonial-section">
+  <div class="testimonial-slider">
+
+    <!-- Testimonial 1 -->
+      <div class="testimonial">
+      <img src="./ulcers package photo.png" alt="ULCERS MRDICINE" class="profile-pic">
+      <h3>ULCERS COMPLETE-DOSE PACKAGE</h3>
+      
+     
+    </div>
+    
+    <!-- Testimonial 2 -->
+    <div class="testimonial">
+      <img src="./Nakato-Gloria.jpg" alt="Skin Cleanser" class="profile-pic">
+      <h3>Nakato Gloria</h3>
+  </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial">
+      <img src="./Senyonga-Rashid.jpg" alt="Mike Brown" class="profile-pic">
+      <h3>Senyonga Rashid</h3>
+  </div>
+
+
+    <!-- Testimonial 4 -->
+    <div class="testimonial">
+      <img src="./Sellector-Eddy.jpg" alt="Emily White" class="profile-pic">
+      <h3>Sellector Eddy</h3>
+ </div>
+
+    <!-- Testimonial 5 -->
+    <div class="testimonial">
+      <img src="./Augistin-Baraka.jpg" alt="Alex Green" class="profile-pic">
+      <h3>Augistin Baraka</h3>
+    </div>
+
+    <!-- Testimonial 6 -->
+    <div class="testimonial">
+      <img src="./Nansikombi-Evelyn.jpg" alt="Sophia Blue" class="profile-pic">
+      <h3>Nansikombi Evelyn</h3>
+    </div>
+
+
+    <!-- Testimonial 7 -->
+    <div class="testimonial">
+      <img src="./Asifiwe-Claude.jpg" alt="David Black" class="profile-pic">
+      <h3>Asifiwe Claude</h3>
+ </div>
+
+
+    <!-- Testimonial 8 -->
+   <div class="testimonial">
+      <img src="./Isaac-Ojok.jpg" alt="Arnold Shirima" class="profile-pic">
+      <h3>Isaac Ojok</h3>
+ </div>
+
+
+  </div>
+
+  <!-- Navigation -->
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+
+   
+  <script>
+    const slider = document.querySelector('.testimonial-slider');
+const testimonials = document.querySelectorAll('.testimonial');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let index = 0;
+
+function showSlide(i) {
+  if (i >= testimonials.length) index = 0;
+  else if (i < 0) index = testimonials.length - 1;
+  else index = i;
+
+  slider.style.transform = `translateX(-${index * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => showSlide(index + 1));
+prevBtn.addEventListener('click', () => showSlide(index - 1));
+
+// Auto-slide every 5 seconds
+setInterval(() => {
+  showSlide(index + 1);
+}, 11000);
+  </script>
+</section>   
+</body>
+</html>
